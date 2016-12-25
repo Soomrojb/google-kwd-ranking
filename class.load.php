@@ -48,11 +48,11 @@
 
 			//	Two methods for loading the page
 
-			//$maincode	=	file_get_html($finallink);
-			$maincode	=	$this->dlPage($finallink);
+			$maincode	=	file_get_html($finallink);
+			//$maincode	=	$this->dlPage($finallink);
 			
 			//	View page code for debugging
-			//echo	$maincode;
+			//	echo	$maincode;
 
 			$counter	=	0;
 			$resarray	=	array();
