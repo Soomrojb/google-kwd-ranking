@@ -47,7 +47,6 @@
 			$finallink	=	$this->gsrc_url . urlencode($kwd);
 
 			//	Two methods for loading the page
-
 			$maincode	=	file_get_html($finallink);
 			//$maincode	=	$this->dlPage($finallink);
 			
