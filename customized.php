@@ -82,47 +82,5 @@
 	echo	'	</div>';
 	echo	'</body>';
 	echo	'</html>';
-	
-	die();
-	
-	
-	/*
 
-	$keywords	=	$_GET['keywords'];
-	$kwdarray	=	explode(',', $keywords);
-	$kwdcount	=	count($kwdarray);
-	$srcterm	=	$_GET['search'];
-
-	echo	'<head>';
-	echo	'	<title>Bootstrap Example</title>';
-	echo	'	<meta charset="utf-8">';
-	echo	'	<meta name="viewport" content="width=device-width, initial-scale=1">';
-	echo	'	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">';
-	echo	'	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>';
-	echo	'	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>';
-	echo	'</head>';
-	echo	'<body>';
-	echo	'	<div class="container">';
-	echo	'		<table class="table table-hover">';
-	echo	'			<thead>';
-	echo	'				<tr>';
-	echo	'					<th>Keyword</th>';
-	echo	'					<th>Position</th>';
-	echo	'					<th>URL</th>';
-	echo	'				</tr>';
-	echo	'			</thead>';
-	echo	'			<tbody>';
-
-		$fetch		=	new scrap();
-		for ($kwdloop = 0; $kwdloop < $kwdcount; $kwdloop++) {
-			echo			$fetch->loadpage($kwdarray[$kwdloop], $srcterm);
-		}
-
-	echo	'			</tbody>';
-	echo	'		</table>';
-	echo	'	</div>';
-	echo	'</body>';
-	echo	'</html>';
-	
-	*/
 ?>

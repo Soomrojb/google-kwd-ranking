@@ -8,8 +8,9 @@ How to use the script:<br>
 In above example, the script will search all 3 keywords "mobile", "phone" & "android" at Google.com and match the URL "whatmobile" with each result that individual search produced; if a match is found, it is later displayed in a bootstrap table.
 
 Live Demo:<br>
+
 	V1 simplified:
 	http://thedigioutlet.com/filez/google-kwd-ranking/grank.php?keywords=rice+importer&search=alibaba
 	
 	V2 with Database:
-	http://thedigioutlet.com/filez/google-kwd-ranking/grank.php?keywords=rice+importer&search=alibaba
+	http://thedigioutlet.com/filez/google-kwd-ranking/customized.php?keywords=rice+importer&search=alibaba
