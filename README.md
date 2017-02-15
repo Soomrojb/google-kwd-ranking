@@ -18,7 +18,7 @@ How to use the script:<br>
 ### Live Demo:<br>
 
 V1 simplified:<br/>
-[/grank.php?keywords=rice+importer&search=alibaba](//thedigioutlet.com/filez/google-kwd-ranking/grank.php?keywords=rice+importer&search=alibaba "Google keyword rank checker : simplified")
+[/grank.php?keywords=rice+importer&search=alibaba](http://thedigioutlet.com/filez/google-kwd-ranking/grank.php?keywords=rice+importer&search=alibaba "Google keyword rank checker : simplified")
 	
 V2 with Database|Historical:<br/>
-[/customized.php?keywords=rice+importer&search=alibaba](//thedigioutlet.com/filez/google-kwd-ranking/customized.php?keywords=rice+importer&search=alibaba "Google keyword rank checker : historical / database")
+[/customized.php?keywords=rice+importer&search=alibaba](http://thedigioutlet.com/filez/google-kwd-ranking/customized.php?keywords=rice+importer&search=alibaba "Google keyword rank checker : historical / database")
