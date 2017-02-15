@@ -11,7 +11,9 @@ How to use the script:<br>
 
 - [x] Basic bugs fixed
 - [x] Verified on Shared|Private hosting
+- [x] SQL dump included
 - [ ] Captcha resistant
+
 
 ### Live Demo:<br>
 
