@@ -41,7 +41,13 @@
 		$SrchRc	=	$Crawler->LoadPage($keyword, $website);
 		
 		if ($SrchRc) {
-			$DBase->UpdateRecs($KwdID, $SrchRc[0][1]);
+			
+			//	Single position
+			//$DBase->UpdateRecs($KwdID, $SrchRc[0][1]);
+			
+			//	Multiple positions
+			$DBase->UpdateRecs($KwdID, implode(",", $SrchRc));
+
 		} else {
 			$DBase->UpdateRecs($KwdID, '0');
 		}

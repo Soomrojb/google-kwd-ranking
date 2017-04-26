@@ -56,7 +56,15 @@
 			foreach ($maincode->find('div[class=kv] cite') as $post) {
 				$counter++;
 				if (strpos($post->plaintext, $srcterm) !== false) {
-					array_push($resarray, [$kwd,$counter,$post->plaintext]);
+					
+					//	Array with Keyword and Counter
+					//array_push($resarray, [$kwd,$counter,$post->plaintext]);
+					
+					//	Keep only position
+					array_push($resarray, $counter);
+					
+					//	Break if searched
+					//break;
 				}
 			}
 			
