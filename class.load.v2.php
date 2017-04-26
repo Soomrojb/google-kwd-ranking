@@ -54,10 +54,10 @@
 			$resarray	=	array();
 			//foreach ($maincode->find('h3[class=r] cite') as $post) {
 			foreach ($maincode->find('div[class=kv] cite') as $post) {
+				$counter++;
 				if (strpos($post->plaintext, $srcterm) !== false) {
 					array_push($resarray, [$kwd,$counter,$post->plaintext]);
 				}
-				$counter++;
 			}
 			
 			return	$resarray;
