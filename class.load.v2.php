@@ -52,9 +52,10 @@
 			
 			$counter	=	0;
 			$resarray	=	array();
-			foreach ($maincode->find('h3[class=r] a') as $post) {
-				if (strpos($post->href, $srcterm) !== false) {
-					array_push($resarray, [$kwd,$counter,$post->href]);
+			//foreach ($maincode->find('h3[class=r] cite') as $post) {
+			foreach ($maincode->find('div[class=kv] cite') as $post) {
+				if (strpos($post->plaintext, $srcterm) !== false) {
+					array_push($resarray, [$kwd,$counter,$post->plaintext]);
 				}
 				$counter++;
 			}

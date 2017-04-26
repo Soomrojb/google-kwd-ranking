@@ -14,6 +14,7 @@
 		Author Name:	Janib Soomro
 		Author Email:	janib4all@gmail.com
 		Creation date:	20th Dec. 2016
+		Last Modified:	26th Apr. 2017
 		
 		Version # 2: Customized.php
 	
@@ -38,6 +39,7 @@
 	foreach($kwdarray as $keyword) {
 		$KwdID	=	$DBase->getkwdid($keyword);
 		$SrchRc	=	$Crawler->LoadPage($keyword, $website);
+		
 		if ($SrchRc) {
 			$DBase->UpdateRecs($KwdID, $SrchRc[0][1]);
 		} else {
