@@ -44,7 +44,7 @@ CREATE TABLE `ranking` (
   `date` text NOT NULL,
   `serial` int(11) NOT NULL,
   `kwdref` int(11) NOT NULL,
-  `position` int(11) NOT NULL
+  `position` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
