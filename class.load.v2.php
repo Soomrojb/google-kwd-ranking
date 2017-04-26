@@ -2,7 +2,8 @@
 
 	class Crawler {
 		
-		public	$gsrc_url	=	'https://www.google.com/search?num=100&q=';
+		//public	$gsrc_url	=	'https://www.google.com/search?num=100&q=';
+		public	$gsrc_url	=	'https://www.google.com/search?num=100';
 		public	$cHeadres	=	array(
 							'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
 							'Accept-Language: en-US,en;q=0.5',
@@ -40,31 +41,38 @@
 			}
 		}
 
-		function LoadPage($kwd, $srcterm) {
+		function LoadPage($kwd, $srcterm, $page=1, $startfrom=0) {
 			
 			include_once	"simple_html_dom.php";
 			
-			$finallink	=	$this->gsrc_url . urlencode($kwd);
+			$finallink	=	$this->gsrc_url . '&p=' . $page . '&start=' . $startfrom . '&q=' . urlencode($kwd);
 
 			//	Two methods for loading the page
 			$maincode	=	file_get_html($finallink);
 			//$maincode	=	$this->dlPage($finallink);
 			
+			$position	=	0;
 			$counter	=	0;
 			$resarray	=	array();
 			//foreach ($maincode->find('h3[class=r] cite') as $post) {
 			foreach ($maincode->find('div[class=kv] cite') as $post) {
-				$counter++;
+				$position++;
 				if (strpos($post->plaintext, $srcterm) !== false) {
 					
-					//	Array with Keyword and Counter
-					//array_push($resarray, [$kwd,$counter,$post->plaintext]);
+					//	Array with Keyword and Position
+					//array_push($resarray, [$kwd,$position,$post->plaintext]);
 					
 					//	Keep only position
-					array_push($resarray, $counter);
+					array_push($resarray, ((($page -1) * 100) + $position));
 					
 					//	Break if searched
 					//break;
+					
+					//	Allow top 5 positions only
+					$counter++;
+					if ($counter >= 5) {
+						break;
+					}
 				}
 			}
 			

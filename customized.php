@@ -38,7 +38,7 @@
 
 	foreach($kwdarray as $keyword) {
 		$KwdID	=	$DBase->getkwdid($keyword);
-		$SrchRc	=	$Crawler->LoadPage($keyword, $website);
+		$SrchRc	=	$Crawler->LoadPage($keyword, $website, 1, 0);
 		
 		if ($SrchRc) {
 			
@@ -49,7 +49,18 @@
 			$DBase->UpdateRecs($KwdID, implode(",", $SrchRc));
 
 		} else {
-			$DBase->UpdateRecs($KwdID, '0');
+			
+			//	Search on 2nd page if no results found on 1st page
+			$SrchRc	=	$Crawler->LoadPage($keyword, $website, 2, 100);
+			if ($SrchRc) {
+				//	Single position
+				//$DBase->UpdateRecs($KwdID, $SrchRc[0][1]);
+				
+				//	Multiple positions
+				$DBase->UpdateRecs($KwdID, implode(",", $SrchRc));
+			} else {
+				$DBase->UpdateRecs($KwdID, '0');
+			}
 		}
 	}
 
