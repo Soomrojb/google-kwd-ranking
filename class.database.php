@@ -6,8 +6,8 @@
 		public	$dbCreds	=	array(
 									'host'		=>	'localhost',
 									'dbuser'	=>	'admin',
-									'dbpass'	=>	'admin',
-									'dbname'	=>	'glKwds',
+									'dbpass'	=>	'admin$',
+									'dbname'	=>	'googlekwds',
 									'tables'	=>	array(
 														'keywords'	=>	'keywords',
 														'ranking'	=>	'ranking'
@@ -26,7 +26,11 @@
 			if (!$this->Connection) {
 					echo	"Error connecting to database!";
 				} else {
+					var_dump($this->Connection);
+					echo '<br/>';
 					$status	=	mysqli_select_db($this->Connection, $this->dbCreds['dbname']);
+					var_dump($status);
+					echo '<br/>';
 						if(!$status){
 							echo	"Error accessing the database!";
 						} else {
